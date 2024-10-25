@@ -3,13 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>chart Student List</title>
+  <title>Chart and Student List</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h2 {
+      color: #4b6584;
+    }
+
+    /* Chart Container */
+    .chart-container {
+      width: 80%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    /* Student List Styling */
+    .student-list {
+      width: 80%;
+      max-width: 400px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      font-size: 1.1em;
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
-  <h2>Sample Bar Chart</h2>
-  <canvas id="myChart" width="400" height="200"></canvas>
-  
+
+  <div class="chart-container">
+    <h2>Sample Bar Chart</h2>
+    <canvas id="myChart" width="400" height="200"></canvas>
+  </div>
+
+  <div class="student-list">
+    <h2>Student List</h2>
+    <ul>
+      <li>Oskar Kalungat</li>
+      <li>Wiggy Nabuang</li>
+      <li>Daboy Makabungkag</li>
+      <li>Totoy Baranga</li>
+      <li>Inday Palad</li>
+    </ul>
+  </div>
+
   <script>
     const ctx = document.getElementById('myChart').getContext('2d');
     const myChart = new Chart(ctx, {
@@ -20,12 +87,12 @@
           label: '# of Votes',
           data: [12, 19, 3, 5, 2, 3],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-            'rgba(255, 159, 64, 0.2)'
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)'
           ],
           borderColor: [
             'rgba(255, 99, 132, 1)',
@@ -48,14 +115,5 @@
     });
   </script>
 
-  <!-- Student List Section -->
-  <h2>Student List</h2>
-  <ul>
-    <li>oskar kalungat</li>
-    <li>wiggy nabuang</li>
-    <li>daboy makabungkag</li>
-    <li>totoy baranga</li>
-    <li>inday palad</li>
-  </ul>
 </body>
 </html>
